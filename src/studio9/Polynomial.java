@@ -56,9 +56,13 @@ public class Polynomial {
 
 	
 	public Polynomial derivative() {
-		return null;//FIXME
+
+		Polynomial p = new Polynomial();
+		for (int i = 0; i<list.size()-1; i++){
+			p.addTerm(this.list.get(i)*(this.list.size()-1-i)); 
 	}
-	
+	return p;
+}
 
 	/**
 	 * This is the "equals" method that is called by
@@ -110,7 +114,7 @@ public class Polynomial {
 		return this.list.equals(other.list);
 	}
 
-/*	public static void main(String[] args){
+public static void main(String[] args){
 	Polynomial p1 = new Polynomial();
 	p1.addTerm(5);
 	p1.addTerm(0);
@@ -118,7 +122,7 @@ public class Polynomial {
 	p1.addTerm(3);
 
 	System.out.println(p1.toString());
+	System.out.println(p1.derivative());
 }
-	*/
 
 }

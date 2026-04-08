@@ -118,4 +118,8 @@ public class PolynomialTest {
 		System.out.println("Expected: " + expected.toString());
 		System.out.println("Actual: " + actual.toString());
 	}
+
+	public static void main(String[] args) {
+		
+	}
 }
